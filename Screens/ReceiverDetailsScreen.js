@@ -81,13 +81,10 @@ export default class ReceiverDetailsScreen extends Component{
                   centerComponent={{ text:"Donate Books", style: { color: '#90A5A9', fontSize:20,fontWeight:"bold", } }}
                   backgroundColor = "#eaf8fe"
                 />
-                </View>
-              {/* </View>
+              
+               </View>
               <View style={{flex:0.3}}>
-                <Card
-                    title={"Book Information"}
-                    titleStyle= {{fontSize : 20}}
-                  >
+                <Card.Title>Book Information</Card.Title>
                   <Card >
                     <Text style={{fontWeight:'bold'}}>Name : {this.state.bookName}</Text>
                   </Card>
@@ -97,10 +94,7 @@ export default class ReceiverDetailsScreen extends Component{
                 </Card>
               </View>
               <View style={{flex:0.3}}>
-                <Card
-                  title={"Reciever Information"}
-                  titleStyle= {{fontSize : 20}}
-                  >
+                <Card.Title>Book Information</Card.Title>
                   <Card>
                     <Text style={{fontWeight:'bold'}}>Name: {this.state.recieverName}</Text>
                   </Card>
@@ -111,15 +105,15 @@ export default class ReceiverDetailsScreen extends Component{
                     <Text style={{fontWeight:'bold'}}>Address: {this.state.recieverAddress}</Text>
                   </Card>
                 </Card>
-              </View> */}
-              <View>
-              <Text style = {{ fontSize : 30}}> Book Information</Text>
-              <Text style={{fontWeight:'bold'}}>Name : {this.state.bookName}</Text>
-              <Text style={{fontWeight:'bold'}}>Reason : {this.state.reason_for_requesting}</Text>
-              <Text style = {{ fontSize: 30}}>Receiver Information</Text>
-              <Text style={{fontWeight:'bold'}}>Name: {this.state.recieverName}</Text>
-              <Text style={{fontWeight:'bold'}}>Contact: {this.state.recieverContact}</Text>
-              <Text style={{fontWeight:'bold'}}>Address: {this.state.recieverAddress}</Text>
+              </View> 
+//               <View>
+//               <Text style = {{ fontSize : 30}}> Book Information</Text>
+//               <Text style={{fontWeight:'bold'}}>Name : {this.state.bookName}</Text>
+//               <Text style={{fontWeight:'bold'}}>Reason : {this.state.reason_for_requesting}</Text>
+//               <Text style = {{ fontSize: 30}}>Receiver Information</Text>
+//               <Text style={{fontWeight:'bold'}}>Name: {this.state.recieverName}</Text>
+//               <Text style={{fontWeight:'bold'}}>Contact: {this.state.recieverContact}</Text>
+//               <Text style={{fontWeight:'bold'}}>Address: {this.state.recieverAddress}</Text>
 
              
               </View>
