@@ -12,12 +12,23 @@ export default class MyDonationScreen extends Component {
      super()
      this.state = {
        userId : firebase.auth().currentUser.email,
-       allDonations : []
+       allDonations : [],
+       bookName :"",
+       donorName :" "
      }
      this.requestRef= null
    }
 
-
+getDonorDetails = (donorId) => {
+    db.collection("users").where("email_Id", "==", donorId).get()
+      .then((snapshot) => {
+        snapshot.forEach((doc) => {
+          this.setState({
+            "donorName": doc.data().first_name + " " + doc.data().last_name
+          })
+        });
+      })
+  }
    getAllDonations =()=>{
      this.requestRef = db.collection("all_donations").where("donor_id" ,'==', this.state.userId)
      .onSnapshot((snapshot)=>{
@@ -52,6 +63,7 @@ export default class MyDonationScreen extends Component {
    
    componentDidMount(){
      this.getAllDonations()
+     this.getDonorDetails(this.state.userId)
    }
 
    componentWillUnmount(){
